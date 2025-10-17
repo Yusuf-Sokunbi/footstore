@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h1>Main Page</h1>
+        <h1>FootShop</h1>
+        <router-link to="/products">Products</router-link>
+        <router-link to="/cart">ShoppingCart</router-link>
     </div>
 </template>
 
