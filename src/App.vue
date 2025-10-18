@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="cove">
+   <div class="route-link"> 
+    <router-link to="/">&#8592;</router-link>
     <router-link to="/products">Products</router-link>
-    <router-link to="/cart">ShoppingCart</router-link>
+    <router-link to="/cart">ShoppingCart</router-link></div>
      <router-view></router-view>
   </div>
 </template>
@@ -16,5 +18,10 @@ export default {
   }
 }
 </script>
-
+<style>
+.route-link{
+  display: flex;
+  justify-content: space-between;
+  }
+  </style>
 

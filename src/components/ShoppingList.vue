@@ -7,7 +7,7 @@
             :src="product.imageName" alt="">
             <div class="details-wrap">
                 <h2>{{ product.name }}</h2>
-                <p>{{ product.price }} - Qty({{ product.quantity }})</p>
+                <p>{{ product.price }} - ({{ quantity }})</p>
             </div>
             <button class="remove-button" @click="deleteItem(product.id)" >Remove from Cart</button>
         </div>
@@ -19,6 +19,7 @@ import { cartItems } from '@/temp-data';
 export default{
     name:'ShoppingCartList',
     props:['products'],
+  
  methods:{
     deleteItem(id){
      const updateCart = cartItems.filter(cart => cart.id !== id)

@@ -2,7 +2,10 @@
   box-sizing: border-box;
   font-family: Arial;
 }
-
+.cover{
+  background-image: url('./FOOTIMAGE/footshop.jpg');
+  background-size: cover;
+}
 .page-wrap {
   margin: auto;
   max-width: 800px;
