@@ -11,20 +11,23 @@ import LouisVitun from './FOOTIMAGE/Half_shoe/IMG_1017.jpg';
 import LouisVitunWhite from './FOOTIMAGE/Half_shoe/IMG_1018.jpg';
 
 export const cartItems = [{
-    id: 123,
+    id: '123',
     name: 'Basil',
     price: '$26.00',
     imageName: basilBottle,
+    quantity:1
 }, {
-    id: 234,
+    id: '234',
     name: 'Lemon',
     price: '$26.00',
     imageName: lemonBottle,
+    quantity:1
 }, {
-    id: 345,
+    id: '345',
     name: 'Garlic',
     price: '$26.00',
     imageName: garlicBottle,
+    quantity:1
 }];
 
 export const products = [{

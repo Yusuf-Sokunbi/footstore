@@ -19,20 +19,33 @@
 </template>
 
 <script>
-import {products, cartItems} from '../temp-data'
+import {products,cartItems } from '../temp-data'
 
 export default{
     name:'ProductDetailPage',
     data(){
         return{
-            product : products.find(product => product.id === this.$route.params.productId)
+            product : products.find(product => product.id === (this.$route.params.productId)),
+          
         }
     },
     methods:{
-      addToCart(id){
-       cartItems.push(id)
-       
+      addToCart(){
+        const existingItem = cartItems.find(cart => cart.id === this.product.id)
+        if(existingItem){
+          existingItem.quantity++
+        }else {
+          cartItems.push({ ...this.product, quantity: 1 })
+          console.log(this.product, this.quantity)
+        }
+        
       }
-    }
+    },
+    computed: {
+  existingItem() {
+    return cartItems.find(cart => cart.id === this.product.id)
+  }
+}
+
 }
 </script>

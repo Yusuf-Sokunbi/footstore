@@ -7,7 +7,7 @@
             :src="product.imageName" alt="">
             <div class="details-wrap">
                 <h2>{{ product.name }}</h2>
-                <p>{{ product.price }}</p>
+                <p>{{ product.price }} - {{ product.quantity }}</p>
             </div>
             <button class="remove-button">Remove from Cart</button>
         </div>
