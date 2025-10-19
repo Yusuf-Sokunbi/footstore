@@ -10,8 +10,8 @@
     <router-link to="/products">Products</router-link>
     <router-link to="/cart">ShoppingCart</router-link></div>
      
-    <div><router-view></router-view></div>
-    <div>
+    <div v-if="!searchEntry"><router-view></router-view></div>
+    <div v-if="searchEntry">
       <ProductList :products="filteredItems"/>
     </div>
   </div>
