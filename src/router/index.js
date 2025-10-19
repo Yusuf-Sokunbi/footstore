@@ -26,6 +26,26 @@ const routes = [
     name: "ProductDetails",
     component: () => import("../pages/ProductDetailPage.vue")
   },
+  {
+    path: "/shoe",
+    name: "ShoePage",
+    component: () => import("../pages/ShoeStock.vue")
+  },
+  {
+    path: "/sandal",
+    name: "SandalPage",
+    component: () => import("../pages/SandalStock.vue")
+  },
+  {
+    path: "/halfshoe",
+    name: "HalfShoePage",
+    component: () => import("../pages/HalfShoeStock.vue")
+  },
+   {
+    path: "/palm",
+    name: "PalmPage",
+    component: () => import("../pages/PalmStock.vue")
+  },
 ];
 
 const router = new VueRouter({

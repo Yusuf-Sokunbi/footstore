@@ -36,7 +36,8 @@ export default{
           existingItem.quantity++
         }else {
           cartItems.push({ ...this.product, quantity: 1 })
-          console.log(this.product, this.quantity)
+          // console.log(this.product, this.quantity)
+          alert('Product added successfully')
         }
         
       }

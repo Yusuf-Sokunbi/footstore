@@ -7,7 +7,7 @@
             :src="product.imageName" alt="">
             <div class="details-wrap">
                 <h2>{{ product.name }}</h2>
-                <p>{{ product.price }} - ({{ quantity }})</p>
+                <p>{{ product.price }} </p>
             </div>
             <button class="remove-button" @click="deleteItem(product.id)" >Remove from Cart</button>
         </div>
@@ -25,7 +25,8 @@ export default{
      const updateCart = cartItems.filter(cart => cart.id !== id)
      // mutate the imported array in-place instead of reassigning the module binding
      cartItems.splice(0, cartItems.length, ...updateCart)
-     console.log('delete:', id)
+    //  console.log('delete:', id)
+    alert('Product was removed from cart successfully ')
     }
  }
 }</script>

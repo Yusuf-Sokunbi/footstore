@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>list of products</h1>
+        <h1>list of {{ name }}</h1>
          <div class="grid-wrap">
         <div class="product-item"
            v-for="product in products" :key="product.id">
