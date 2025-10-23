@@ -9,7 +9,7 @@
           <p class="product-price">{{ product.price }}</p>
           <router-link 
             :to="'/products/' + product.id">
-            <button >View details</button>
+            <button class="bg-black text-white text-lg font-semibold w-[90%] my-3 py-2 ml-5 rounded-lg" >View details</button>
           </router-link>
        </div>
     </div>
