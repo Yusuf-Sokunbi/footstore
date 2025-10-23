@@ -1,8 +1,6 @@
 <template>
     <div>
-        <h1>Product Page</h1>
         <listItems :products="palms" :name="name" />
-        <!-- <button @click="findCategory">palm</button> -->
     </div>
 </template>
 

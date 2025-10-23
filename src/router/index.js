@@ -46,6 +46,11 @@ const routes = [
     name: "PalmPage",
     component: () => import("../pages/PalmStock.vue")
   },
+  {
+    path: "/black",
+    name: "PalmPage",
+    component: () => import("../views/ColorBlack.vue")
+  },
 ];
 
 const router = new VueRouter({

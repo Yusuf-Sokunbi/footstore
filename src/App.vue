@@ -1,16 +1,19 @@
 <template>
   <div class="cove">
-   <div class="route-link"> 
-    <router-link to="/">&#8592;</router-link>
-    <div>
+   <div class="md:flex justify-between mx-4 bg-black p-3 text-white items-center"> 
+    <router-link to="/" class="flex items-center gap-2"><img :src="FootIcon" alt="" class="w-[20%] rounded-full"><span class="text-lg font-bold">FootShop</span></router-link>
+    <div class="py-4">
       <input type="text" placeholder="Enter your product name"
-      @input="debouncedSearch" v-model="searchEntry">
-    <button @click="searchButton">Search</button>
+      @input="debouncedSearch" v-model="searchEntry" class="py-2 px-4">
+    <button @click="searchButton" class="p-2 rounded-sm ml-1 bg-blue-800">Search</button>
   </div>
     <router-link to="/products">Products</router-link>
-    <router-link to="/cart">ShoppingCart</router-link></div>
-     <div>
-            <select name="" id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
+    <router-link to="/cart">ShoppingCart</router-link>
+  </div>
+    <div class="flex gap-2">
+       <div>
+        <select class="md:w-[100px] p-2  border-[#4CAF50] bg-[#F9F9F9] text-[#333] md:text-md"
+        id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
                <option value="" disabled>Category</option>
                <option value="shoe">Shoe</option>
                <option value="/sandal">Sandal</option>
@@ -18,6 +21,39 @@
                <option value="/halfshoe">Halfshoe</option> 
        </select>
      </div>
+      <div>
+        <select class="md:w-[100px] p-2  border-[#4CAF50] bg-[#F9F9F9] text-[#333] md:text-md"
+        id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
+               <option value="" disabled>Color</option>
+               <option value="">White</option>
+               <option value="/black">Black</option>
+               <option value="">White</option>
+               <option value="">Other</option> 
+       </select>
+     </div>
+      <div>
+        <select class="md:w-[200px] p-2  border-[#4CAF50] bg-[#F9F9F9] text-[#333] md:text-xl"
+        id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
+               <option value="" disabled>Price</option>
+               <option value="">$0-$5</option>
+               <option value="">$6-10$</option>
+               <option value="">$11-$20</option>
+               <option value="">$21-$100</option> 
+       </select>
+     </div>
+      <div>
+        <select class="md:w-[200px] p-2  border-[#4CAF50] bg-[#F9F9F9] text-[#333] md:text-xl"
+        id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
+               <option value="" disabled>Size</option>
+               <option value="">40</option>
+               <option value="">41</option>
+               <option value="">42</option>
+               <option value="">43</option> 
+               <option value="">44</option> 
+               <option value="">45</option> 
+       </select>
+     </div>
+    </div>
      
     <div><router-view></router-view></div>
     <div >
@@ -28,9 +64,9 @@
 
 <script>
 import {products} from './temp-data.js'
-// import _ from "lodash";
 import ProductList from './components/ProductList.vue'
-// import { filter } from 'core-js/core/array';
+import FootIcon from './FOOTIMAGE/footicon.jpg'
+
 export default {
   name: 'App',
   data(){
@@ -40,20 +76,11 @@ export default {
       filteredName:[],
       loadPage:true,
       selectedRoute:'',
+      FootIcon,
+      
       
      }
   },
-  // created() {
-  //   this.filteredItems = this.items; // Initialize with all items
-  //   this.debouncedSearch = _.debounce(this.searchEntry, 300);
-  // },
-  //  computed: {
-  //   filteredItems() {
-  //     return products.filter((item) =>
-  //       item.name.toLowerCase().includes(this.searchEntry.toLowerCase())
-  //     );
-  //   },
-  // },
      components: {
    ProductList
   },
@@ -84,5 +111,14 @@ export default {
   display: flex;
   justify-content: space-around;
   }
+  /* select {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+} */
   </style>
 

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>Product Page</h1>
         <listItems :products="sandals" :name="name" />
     </div>
 </template>

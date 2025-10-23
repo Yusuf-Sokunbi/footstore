@@ -37,48 +37,64 @@ export const products = [{
     price: '$26.00',
     imageName: basilBottle,
     category:'Sandal',
+    size: ['38','39','40','41','42'],
+    color: ['Black','White','Brown']
 }, {
     id: 2,
     name: 'Lemon',
     price: '$26.00',
     imageName: lemonBottle,
-    category:'Sandal'
+    category:'Sandal',
+    size: ['38','39','40','43','45'],
+    color: ['Black','other','Brown']
 }, {
     id: 3,
     name: 'Garlic',
     price: '$26.00',
     imageName: garlicBottle,
     category:'Sandal',
+    size: ['38','39','40','42','44'],
+    color: ['Black','Brown']
 }, {
     id: 4,
     name: 'Rosemary',
     price: '$26.00',
     imageName: rosemaryBottle,
     category:'Sandal',
+    size: ['40','41','42'],
+    color: ['Black','White','Brown']
 }, {
     id: 5,
     name: 'Chili',
     price: '$26.00',
     imageName: chiliBottle,
     category:'Sandal',
+    size: ['38','39','40','42'],
+    color: ['Black','White','Brown']
 }, {
     id: 6,
     name: 'Delicate',
     price: '$24.50',
     imageName: delicateBottle,
     category:'Shoe',
+    size: ['38','39','40','41','42'],
+    color: ['Brown']
 }, {
     id: 7,
     name: 'Medium',
     price: '$24.50',
     imageName: mediumBottle,
     category:'Shoe',
+    size: ['38','39','40','41','42'],
+    color: ['Black','White','Brown']
 }, {
     id: 8,
     name: 'Bold',
     price: '$24.50',
     imageName: boldBottle,
     category:'Shoe',
+    size: ['38','40','41','42'],
+    color: ['Black','White','Brown']
 },
  {
     id: 10,
@@ -86,31 +102,42 @@ export const products = [{
     price: '$24.50',
     imageName: LouisVitun,
     category:'Halfshoe',
+    size: ['38','39','40','41','42'],
+    color: ['Black','White','Brown']
 }, {
     id: 11,
     name: 'ShoeBottle',
     price: '$24.50',
     imageName: ShoeBottle,
     category:'Shoe',
+    size: ['38','39','40','41','42'],
+    color: ['Black','White','Brown']
 }, {
     id: 12,
     name: 'LouisVitunWhite',
     price: '$24.50',
     imageName: LouisVitunWhite,
     category:'Halfshoe',
+    size: ['40','41','42','43','44'],
+    color: ['Black','White','Brown']
 }, {
     id: 13,
     name: 'Bold',
     price: '$24.50',
     imageName: boldBottle,
     category:'Shoe',
+    size: ['38','39','40','41','42'],
+    color: ['Black','Brown']
 },
 {
     id: 14,
     name: 'CrossSlippers',
     price: '$24.50',
     imageName: CrossSlippers,
-     category:'Palm',
+    category:'Palm',
+    size: ['38','39','40','41','42'],
+    color: ['Black','White','Brown']
+
 },
 ];
 
@@ -118,249 +145,5 @@ export const products = [{
  export const sandals = products.filter(product => product.category === 'Sandal')
  export const halfshoes = products.filter(product => product.category === 'Halfshoe')
  export const palms = products.filter(product => product.category === 'Palm')
+ export const blacks = products.filter(product => product.color['Black'] === 'Black')
 
-// export const shoes = [
-// //     {
-// //     id: '123',
-// //     name: 'Basil',
-// //     price: '$26.00',
-// //     imageName: basilBottle,
-// // }, {
-// //     id: '234',
-// //     name: 'Lemon',
-// //     price: '$26.00',
-// //     imageName: lemonBottle,
-// // }, {
-// //     id: '345',
-// //     name: 'Garlic',
-// //     price: '$26.00',
-// //     imageName: garlicBottle,
-// // },
-// //  {
-// //     id: '456',
-// //     name: 'Rosemary',
-// //     price: '$26.00',
-// //     imageName: rosemaryBottle,
-// // }, {
-// //     id: '567',
-// //     name: 'Chili',
-// //     price: '$26.00',
-// //     imageName: chiliBottle,
-// //},
-//  {
-//     id: '678',
-//     name: 'Delicate',
-//     price: '$24.50',
-//     imageName: delicateBottle,
-// }, {
-//     id: '789',
-//     name: 'Medium',
-//     price: '$24.50',
-//     imageName: mediumBottle,
-// }, {
-//     id: '890',
-//     name: 'Bold',
-//     price: '$24.50',
-//     imageName: boldBottle,
-// },
-// //  {
-// //     id: '100',
-// //     name: 'LouisVitun',
-// //     price: '$24.50',
-// //     imageName: LouisVitun,
-// // },
-//  {
-//     id: '101',
-//     name: 'ShoeBottle',
-//     price: '$24.50',
-//     imageName: ShoeBottle,
-// }, 
-// // {
-// //     id: '102',
-// //     name: 'LouisVitunWhite',
-// //     price: '$24.50',
-// //     imageName: LouisVitunWhite,
-// // }, 
-// {
-//     id: '103',
-//     name: 'Bold',
-//     price: '$24.50',
-//     imageName: boldBottle,
-// }
-// ];
-
-// export const sandals = [{
-//     id: '123',
-//     name: 'Basil',
-//     price: '$26.00',
-//     imageName: basilBottle,
-// }, {
-//     id: '234',
-//     name: 'Lemon',
-//     price: '$26.00',
-//     imageName: lemonBottle,
-// }, 
-// {
-//     id: '345',
-//     name: 'Garlic',
-//     price: '$26.00',
-//     imageName: garlicBottle,
-// }, {
-//     id: '456',
-//     name: 'Rosemary',
-//     price: '$26.00',
-//     imageName: rosemaryBottle,
-// }, {
-//     id: '567',
-//     name: 'Chili',
-//     price: '$26.00',
-//     imageName: chiliBottle,
-// },
-// //  {
-// //     id: '678',
-// //     name: 'Delicate',
-// //     price: '$24.50',
-// //     imageName: delicateBottle,
-// // }, {
-// //     id: '789',
-// //     name: 'Medium',
-// //     price: '$24.50',
-// //     imageName: mediumBottle,
-// // }, {
-// //     id: '890',
-// //     name: 'Bold',
-// //     price: '$24.50',
-// //     imageName: boldBottle,
-// // },
-// //  {
-// //     id: '100',
-// //     name: 'LouisVitun',
-// //     price: '$24.50',
-// //     imageName: LouisVitun,
-// // }, {
-// //     id: '101',
-// //     name: 'ShoeBottle',
-// //     price: '$24.50',
-// //     imageName: ShoeBottle,
-// // }, {
-// //     id: '102',
-// //     name: 'LouisVitunWhite',
-// //     price: '$24.50',
-// //     imageName: LouisVitunWhite,
-// // }, {
-// //     id: '103',
-// //     name: 'Bold',
-// //     price: '$24.50',
-// //     imageName: boldBottle,
-// // }
-// ];
-
-// export const halfshoes = [
-//  {
-//     id: '678',
-//     name: 'Delicate',
-//     price: '$24.50',
-//     imageName: delicateBottle,
-// }, {
-//     id: '789',
-//     name: 'Medium',
-//     price: '$24.50',
-//     imageName: mediumBottle,
-// }, {
-//     id: '890',
-//     name: 'Bold',
-//     price: '$24.50',
-//     imageName: boldBottle,
-// },
-//  {
-//     id: '100',
-//     name: 'LouisVitun',
-//     price: '$24.50',
-//     imageName: LouisVitun,
-// },
-//  {
-//     id: '101',
-//     name: 'ShoeBottle',
-//     price: '$24.50',
-//     imageName: ShoeBottle,
-// },
-//  {
-//     id: '102',
-//     name: 'LouisVitunWhite',
-//     price: '$24.50',
-//     imageName: LouisVitunWhite,
-// },
-//  {
-//     id: '103',
-//     name: 'Bold',
-//     price: '$24.50',
-//     imageName: boldBottle,
-// }
-// ];
-
-// export const palms = [
-// //     {
-// //     id: '123',
-// //     name: 'Basil',
-// //     price: '$26.00',
-// //     imageName: basilBottle,
-// // }, {
-// //     id: '234',
-// //     name: 'Lemon',
-// //     price: '$26.00',
-// //     imageName: lemonBottle,
-// // }, {
-// //     id: '345',
-// //     name: 'Garlic',
-// //     price: '$26.00',
-// //     imageName: garlicBottle,
-// // },
-//  {
-//     id: '456',
-//     name: 'Rosemary',
-//     price: '$26.00',
-//     imageName: rosemaryBottle,
-// }, {
-//     id: '567',
-//     name: 'Chili',
-//     price: '$26.00',
-//     imageName: chiliBottle,
-// }, {
-//     id: '678',
-//     name: 'Delicate',
-//     price: '$24.50',
-//     imageName: delicateBottle,
-// }, {
-//     id: '789',
-//     name: 'Medium',
-//     price: '$24.50',
-//     imageName: mediumBottle,
-// }, {
-//     id: '890',
-//     name: 'Bold',
-//     price: '$24.50',
-//     imageName: boldBottle,
-// },
-//  {
-//     id: '100',
-//     name: 'CrossSlippers',
-//     price: '$24.50',
-//     imageName: CrossSlippers,
-// },
-// // {
-// //     id: '101',
-// //     name: 'ShoeBottle',
-// //     price: '$24.50',
-// //     imageName: ShoeBottle,
-// // }, {
-// //     id: '102',
-// //     name: 'LouisVitunWhite',
-// //     price: '$24.50',
-// //     imageName: LouisVitunWhite,
-// // }, {
-// //     id: '103',
-// //     name: 'Bold',
-// //     price: '$24.50',
-// //     imageName: boldBottle,
-// // }
-// ];

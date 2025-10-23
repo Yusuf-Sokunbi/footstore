@@ -1,15 +1,7 @@
 <template>
     <div class="bg-gray-200">
-        <h1>FootShop</h1>
-        <div>
           <ProductList :products="newProducts" />
-        </div>
-
-        
-        <!-- <router-view></router-view> -->
-        <!-- <img :src="image" alt=""> -->
-     <!-- <div class="route-link">
-         <div >
+         <!-- <div >
         <div class="poster"> 
             <img :src="Slippers" alt="" width="300px" height="300px" />
             <br>
@@ -20,8 +12,8 @@
             <br>
             <router-link to="/halfshoe" class="button-link"><button>{{ view }}&#8594;</button></router-link>
         </div> 
-        </div> 
-        <div>
+        </div>  -->
+        <!-- <div>
         <div class="poster">
             <img :src="sandal" alt="" width="300px" height="300px" />
             <br>
@@ -32,8 +24,8 @@
             <br>
            <router-link to="/shoe" class="button-link"><button>{{ view }}&#8594;</button></router-link>
         </div>
-        </div>
-     </div> -->
+        </div> -->
+     <!-- </div> -->
    
         
     </div>
@@ -46,7 +38,7 @@ export default{
     name:'MainPage',
     data(){
         return{
-            newProducts:products.filter(item => item.id < 5 ),
+            newProducts:products.filter(item => item.id < 20 ),
             view:'For more ',
           
         }
