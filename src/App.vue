@@ -4,7 +4,7 @@
     <router-link to="/" class="flex items-center gap-2"><img :src="FootIcon" alt="" class="w-[20%] rounded-full"><span class="text-lg font-bold">FootShop</span></router-link>
     <div class="py-4">
       <input type="text" placeholder="Enter your product name"
-      @input="debouncedSearch" v-model="searchEntry" class="py-2 px-4">
+      @input="debouncedSearch" v-model="searchEntry" class="py-2 px-4 text-black">
     <button @click="searchButton" class="p-2 rounded-sm ml-1 bg-blue-800">Search</button>
   </div>
     <router-link to="/products">Products</router-link>
