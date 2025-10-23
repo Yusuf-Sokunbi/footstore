@@ -1,8 +1,14 @@
 <template>
-    <div class="cove">
+    <div class="bg-gray-200">
         <h1>FootShop</h1>
+        <div>
+          <ProductList :products="newProducts" />
+        </div>
+
+        
+        <!-- <router-view></router-view> -->
         <!-- <img :src="image" alt=""> -->
-     <div class="route-link">
+     <!-- <div class="route-link">
          <div >
         <div class="poster"> 
             <img :src="Slippers" alt="" width="300px" height="300px" />
@@ -27,30 +33,31 @@
            <router-link to="/shoe" class="button-link"><button>{{ view }}&#8594;</button></router-link>
         </div>
         </div>
-     </div>
+     </div> -->
    
         
     </div>
 </template>
 
 <script>
-// import ProductList from '@/components/ProductList.vue'
-import Slippers from '../FOOTIMAGE/Palm/cross_slippers.jpeg'
-import half from '../FOOTIMAGE/Half_shoe/halfshoe.jpg'
-import sandal from '../FOOTIMAGE/Sander/sandal.jpg'
-import shoe from '../FOOTIMAGE/Shoe/DriversShoe.jpg'
+import { products } from '@/temp-data';
+import ProductList from '@/components/ProductList.vue';
 export default{
     name:'MainPage',
-    // props:['filteredItems'],
     data(){
         return{
-            Slippers,
-            half,
-            shoe,
-            sandal,
-            view:'For more '
+            newProducts:products.filter(item => item.id < 5 ),
+            view:'For more ',
+          
         }
     },
+    components:{
+        ProductList
+    },
+
+    methods:{
+      
+    }
   
 }
 </script>

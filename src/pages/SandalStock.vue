@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Product Page</h1>
-        <listItems :products="sandals" />
+        <listItems :products="sandals" :name="name" />
     </div>
 </template>
 
@@ -9,14 +9,17 @@
 import {sandals} from '../temp-data'
 import ListItems from '../components/ProductList.vue'
 export default{
-    name:'SandalStock',
+    name:'SandalStocks',
     data(){
         return{
          sandals,
+         name:'Sandals'
         }
     },
     components:{
         ListItems
-    }
+    },
+   
+
 }
 </script>

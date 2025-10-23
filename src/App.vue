@@ -9,10 +9,19 @@
   </div>
     <router-link to="/products">Products</router-link>
     <router-link to="/cart">ShoppingCart</router-link></div>
+     <div>
+            <select name="" id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
+               <option value="" disabled>Category</option>
+               <option value="shoe">Shoe</option>
+               <option value="/sandal">Sandal</option>
+               <option value="/palm">Palm</option>
+               <option value="/halfshoe">Halfshoe</option> 
+       </select>
+     </div>
      
-    <div v-if="!searchEntry"><router-view></router-view></div>
-    <div v-if="searchEntry">
-      <ProductList :products="filteredItems"/>
+    <div><router-view></router-view></div>
+    <div >
+      <ProductList :products="filteredItems" />
     </div>
   </div>
 </template>
@@ -21,12 +30,16 @@
 import {products} from './temp-data.js'
 // import _ from "lodash";
 import ProductList from './components/ProductList.vue'
+// import { filter } from 'core-js/core/array';
 export default {
   name: 'App',
   data(){
      return{
       searchEntry:'',
       filteredItems:[],
+      filteredName:[],
+      loadPage:true,
+      selectedRoute:'',
       
      }
   },
@@ -47,11 +60,21 @@ export default {
   methods:{
     searchButton(){
        this.filteredItems = products.filter((item) =>
+        item.category.toLowerCase().includes(this.searchEntry.toLowerCase())
+      );
+       this.filteredName = products.filter((item) =>
         item.name.toLowerCase().includes(this.searchEntry.toLowerCase())
       );
        console.log('searchWord:', this.searchEntry)
-      //  this.searchEntry= '';
-    }
+       this.searchEntry= '';
+      //  this.loadPage= !this.loadPage
+    },
+
+    navigateToSelectdRoute(){
+            if(this.selectedRoute){
+                this.$router.push(this.selectedRoute)
+            }
+        }
   },
  
 }

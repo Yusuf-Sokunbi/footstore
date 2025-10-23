@@ -13,6 +13,7 @@ export default{
     data(){
         return{
          halfshoes,
+         name:'Half Shoes'
         }
     },
     components:{

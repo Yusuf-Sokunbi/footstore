@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Product Page</h1>
-        <listItems :products="products" />
+        <listItems :products="products" :name="name" />
     </div>
 </template>
 
@@ -13,6 +13,7 @@ export default{
     data(){
         return{
          products,
+         name:'all Products'
         }
     },
     components:{
