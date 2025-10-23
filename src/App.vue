@@ -10,9 +10,9 @@
     <router-link to="/products">Products</router-link>
     <router-link to="/cart">ShoppingCart</router-link>
   </div>
-    <div class="flex gap-2">
+    <div class="flex gap-2 ml-[20px]">
        <div>
-        <select class="md:w-[100px] p-2  border-[#4CAF50] bg-[#F9F9F9] text-[#333] md:text-md"
+        <select class="md:w-[100px] p-2  border-[#4CAF50] text-[#333] md:text-md"
         id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
                <option value="" disabled>Category</option>
                <option value="shoe">Shoe</option>
@@ -22,17 +22,17 @@
        </select>
      </div>
       <div>
-        <select class="md:w-[100px] p-2  border-[#4CAF50] bg-[#F9F9F9] text-[#333] md:text-md"
+        <select class="md:w-[100px] p-2  border-[#4CAF50]  text-[#333] md:text-md"
         id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
                <option value="" disabled>Color</option>
-               <option value="">White</option>
+               <option value="/brown">Brown</option>
                <option value="/black">Black</option>
-               <option value="">White</option>
-               <option value="">Other</option> 
+               <option value="/white">White</option>
+               <option value="/other">Other</option> 
        </select>
      </div>
       <div>
-        <select class="md:w-[200px] p-2  border-[#4CAF50] bg-[#F9F9F9] text-[#333] md:text-xl"
+        <select class="md:w-[100px] p-2  border-[#4CAF50]  text-[#333] md:text-md"
         id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
                <option value="" disabled>Price</option>
                <option value="">$0-$5</option>
@@ -42,7 +42,7 @@
        </select>
      </div>
       <div>
-        <select class="md:w-[200px] p-2  border-[#4CAF50] bg-[#F9F9F9] text-[#333] md:text-xl"
+        <select class="md:w-[100px] p-2  border-[#4CAF50]  text-[#333] md:text-md"
         id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
                <option value="" disabled>Size</option>
                <option value="">40</option>

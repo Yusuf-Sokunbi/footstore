@@ -48,8 +48,23 @@ const routes = [
   },
   {
     path: "/black",
-    name: "PalmPage",
+    name: "ColorBlack",
     component: () => import("../views/ColorBlack.vue")
+  },
+   {
+    path: "/brown",
+    name: "ColorBrown",
+    component: () => import("../views/ColorBrown.vue")
+  },
+   {
+    path: "/white",
+    name: "ColorWhite",
+    component: () => import("../views/ColorWhite.vue")
+  },
+   {
+    path: "/other",
+    name: "ColorOther",
+    component: () => import("../views/OtherColor.vue")
   },
 ];
 

@@ -1,6 +1,6 @@
 <template>
     <div class="bg-gray-200">
-          <ProductList :products="newProducts" />
+          <ProductList :products="newProducts" :name=name />
          <!-- <div >
         <div class="poster"> 
             <img :src="Slippers" alt="" width="300px" height="300px" />
@@ -38,8 +38,9 @@ export default{
     name:'MainPage',
     data(){
         return{
-            newProducts:products.filter(item => item.id < 20 ),
+            newProducts:products.filter(item => item._id <= 6 ),
             view:'For more ',
+            name:'Products'
           
         }
     },

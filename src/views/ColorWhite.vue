@@ -1,28 +1,24 @@
 <template>
     <div>
-        <listItems :products="blacks" :name="name"/>
+        <listItems :products="whites" :name="name"/>
         <button @click="color">color</button>
     </div>
 </template>
 
 <script>
-import {blacks} from '../temp-data'
+import {whites} from '../temp-data'
 import ListItems from '../components/ProductList.vue'
 export default{
-    name:'ColorBlack',
+    name:'ColorWhite',
     data(){
         return{
-         blacks,
-         name:'Color Black'
+         whites,
+         name:'Color White'
         }
     },
     components:{
         ListItems
     }, 
-    methods:{
-        color(){
-            console.log(this.blacks)
-        }
-    }
+   
 }
 </script>
