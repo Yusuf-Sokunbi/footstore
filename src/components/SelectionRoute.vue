@@ -1,5 +1,5 @@
 <template>
-    <div class="flex gap-2 ml-[20px]">
+    <div class="flex md:gap-2 md:ml-[20px]">
        <div>
         <select class="md:w-[100px] p-2  border-[#4CAF50] text-[#333] md:text-md"
         id="" v-model="selectedCategory" @change="navigateToSelectdRoute">
