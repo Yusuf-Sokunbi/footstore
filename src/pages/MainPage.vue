@@ -1,5 +1,6 @@
 <template>
     <div class="bg-gray-200">
+    
           <ProductList :products="newProducts" :name=name />
          <!-- <div >
         <div class="poster"> 
@@ -34,6 +35,7 @@
 <script>
 import { products } from '@/temp-data';
 import ProductList from '@/components/ProductList.vue';
+// import SelectionRoute from './components/SelectionRoute.vue'
 export default{
     name:'MainPage',
     data(){
@@ -45,7 +47,9 @@ export default{
         }
     },
     components:{
-        ProductList
+        ProductList,
+        // SelectionRoute
+
     },
 
     methods:{

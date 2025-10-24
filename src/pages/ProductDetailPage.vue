@@ -1,13 +1,16 @@
 <template>
  <div> 
-     <div v-if="product">
-       <div class="img-wrap">
-        <img :src="product.imageName" />
+     <div v-if="product" class="w-[60%] mx-auto text-center">
+       <div class="">
+        <img :src="product.imageName" class="w-[60%] h-[400px] mx-auto" />
       </div>
-      <div class="product-details">
-        <h1>{{ product.name }}</h1>
-        <h3 class="price">{{ product.price }}</h3>
-        <button class="add-to-cart" @click="addToCart">Add to cart</button>
+      <div >
+        <div class="flex justify-between font-bold text-xl mb-2">
+           <h1>{{ product.name }}</h1>  
+          <h3 class="price">{{ formatCurrency(product.price) }}</h3>
+        </div>
+        <hr class="border-t-[0.1px] border-gray-400  my-8 w-full mx-"/>
+        <button class="bg-black py-3 w-[100%] text-white rounded-lg" @click="addToCart">Add to cart</button>
       </div>
      </div>
      <div v-if="!product">
@@ -26,7 +29,6 @@ export default{
     data(){
         return{
             product : products.find(product => product.id === (this.$route.params.productId)),
-          
         }
     },
     methods:{
@@ -40,8 +42,14 @@ export default{
           alert('Product added successfully')
         }
         
-      }
+      },
+      formatCurrency(value) {
+      return new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN',
+      }).format(value);
     },
+   },
     computed: {
   existingItem() {
     return cartItems.find(cart => cart.id === this.product.id)

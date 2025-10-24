@@ -1,6 +1,6 @@
 <template>
   <div class="cove">
-   <div class="md:flex justify-between mx-4 bg-black p-3 text-white items-center"> 
+   <!-- <div class="md:flex justify-between mx-4 bg-black p-3 text-white items-center"> 
     <router-link to="/" class="flex items-center gap-2"><img :src="FootIcon" alt="" class="w-[20%] rounded-full"><span class="text-lg font-bold">FootShop</span></router-link>
     <div class="py-4">
       <input type="text" placeholder="Enter your product name"
@@ -9,51 +9,9 @@
   </div>
     <router-link to="/products">Products</router-link>
     <router-link to="/cart">ShoppingCart</router-link>
-  </div>
-    <div class="flex gap-2 ml-[20px]">
-       <div>
-        <select class="md:w-[100px] p-2  border-[#4CAF50] text-[#333] md:text-md"
-        id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
-               <option value="" disabled>Category</option>
-               <option value="shoe">Shoe</option>
-               <option value="/sandal">Sandal</option>
-               <option value="/palm">Palm</option>
-               <option value="/halfshoe">Halfshoe</option> 
-       </select>
-     </div>
-      <div>
-        <select class="md:w-[100px] p-2  border-[#4CAF50]  text-[#333] md:text-md"
-        id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
-               <option value="" disabled>Color</option>
-               <option value="/brown">Brown</option>
-               <option value="/black">Black</option>
-               <option value="/white">White</option>
-               <option value="/other">Other</option> 
-       </select>
-     </div>
-      <div>
-        <select class="md:w-[100px] p-2  border-[#4CAF50]  text-[#333] md:text-md"
-        id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
-               <option value="" disabled>Price</option>
-               <option value="">$0-$5</option>
-               <option value="">$6-10$</option>
-               <option value="">$11-$20</option>
-               <option value="">$21-$100</option> 
-       </select>
-     </div>
-      <div>
-        <select class="md:w-[100px] p-2  border-[#4CAF50]  text-[#333] md:text-md"
-        id="" v-model="selectedRoute" @change="navigateToSelectdRoute">
-               <option value="" disabled>Size</option>
-               <option value="">40</option>
-               <option value="">41</option>
-               <option value="">42</option>
-               <option value="">43</option> 
-               <option value="">44</option> 
-               <option value="">45</option> 
-       </select>
-     </div>
-    </div>
+  </div> -->
+  <NavBar />
+   <SelectionRoute />
      
     <div><router-view></router-view></div>
     <div >
@@ -64,8 +22,9 @@
 
 <script>
 import {products} from './temp-data.js'
+import NavBar from './components/NavBar.vue'
 import ProductList from './components/ProductList.vue'
-import FootIcon from './FOOTIMAGE/footicon.jpg'
+import SelectionRoute from './components/SelectionRoute.vue'
 
 export default {
   name: 'App',
@@ -73,35 +32,34 @@ export default {
      return{
       searchEntry:'',
       filteredItems:[],
-      filteredName:[],
+      
       loadPage:true,
       selectedRoute:'',
-      FootIcon,
+      
       
       
      }
   },
      components: {
-   ProductList
+    ProductList,
+    NavBar,
+    SelectionRoute
+    
   },
   methods:{
     searchButton(){
        this.filteredItems = products.filter((item) =>
         item.category.toLowerCase().includes(this.searchEntry.toLowerCase())
       );
-       this.filteredName = products.filter((item) =>
-        item.name.toLowerCase().includes(this.searchEntry.toLowerCase())
-      );
+      //  this.filteredName = products.filter((item) =>
+      //   item.name.toLowerCase().includes(this.searchEntry.toLowerCase())
+      // );
        console.log('searchWord:', this.searchEntry)
        this.searchEntry= '';
       //  this.loadPage= !this.loadPage
     },
 
-    navigateToSelectdRoute(){
-            if(this.selectedRoute){
-                this.$router.push(this.selectedRoute)
-            }
-        }
+    
   },
  
 }
