@@ -1,7 +1,10 @@
 <template>
     <div class="bg-gray-200">
+    <ProductList v-if="filteredItems" :products="filteredItems" />
+    <ProductList v-else :products="newProducts" :name=name  />
+   
     
-          <ProductList :products="newProducts" :name=name />
+
          <!-- <div >
         <div class="poster"> 
             <img :src="Slippers" alt="" width="300px" height="300px" />
@@ -38,6 +41,7 @@ import ProductList from '@/components/ProductList.vue';
 // import SelectionRoute from './components/SelectionRoute.vue'
 export default{
     name:'MainPage',
+    props:['filteredItems'],
     data(){
         return{
             newProducts:products.filter(item => item._id <= 6 ),

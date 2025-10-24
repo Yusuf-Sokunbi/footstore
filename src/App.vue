@@ -3,16 +3,14 @@
   <NavBar />
   <SelectionRoute />
     <div><router-view></router-view></div>
-    <div>
-      <ProductList :products="filteredItems" />
-    </div>
+    
   </div>
 </template>
 
 <script>
 import {products} from './temp-data.js'
 import NavBar from './components/NavBar.vue'
-import ProductList from './components/ProductList.vue'
+// import ProductList from './components/ProductList.vue'
 import SelectionRoute from './components/SelectionRoute.vue'
 
 export default {
@@ -30,7 +28,7 @@ export default {
      }
   },
      components: {
-    ProductList,
+    // ProductList,
     NavBar,
     SelectionRoute
     
