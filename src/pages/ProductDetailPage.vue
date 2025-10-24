@@ -1,15 +1,17 @@
 <template>
  <div> 
-     <div v-if="product" class="w-[60%] mx-auto text-center">
+     
+     <div v-if="product" class="w-[60%] my-4 mx-auto text-center">
        <div class="">
-        <img :src="product.imageName" class="w-[60%] h-[400px] mx-auto" />
+        <h1 class="font-bold text-xl md:text-2xl ">Product Details</h1>
+        <img :src="product.imageName" class="w-[60%] md:h-[400px] mx-auto" />
       </div>
       <div >
-        <div class="flex justify-between font-bold text-xl mb-2">
+        <div class="flex justify-between font-bold text-xl my-5 md:mb-2">
            <h1>{{ product.name }}</h1>  
           <h3 class="price">{{ formatCurrency(product.price) }}</h3>
         </div>
-        <hr class="border-t-[0.1px] border-gray-400  my-8 w-full mx-"/>
+        <hr class="border-t-[0.5px] border-gray-400 my-3 md:my-8 w-full "/>
         <button class="bg-black py-3 w-[100%] text-white rounded-lg" @click="addToCart">Add to cart</button>
       </div>
      </div>
