@@ -1,16 +1,34 @@
 <template>
   <div class="cove">
-  <NavBar />
+  <!-- <NavBar :name="searchEntry" :values="filteredItems"/> -->
+     <div class="md:flex justify-between mx-4 bg-black p-3 text-white items-center"> 
+    <router-link to="/" class="flex items-center gap-2"><img :src="FootIcon" alt="" class="w-[20%] rounded-full"><span class="text-lg font-bold">FootShop</span></router-link>
+    <div class="py-4">
+    <!-- <SearchButton :value=""/> -->
+        <div>
+         <input type="text" placeholder="Enter your product name"
+      @input="debouncedSearch" v-model="searchEntry" class="py-2 px-4 text-black">
+    <button @click="searchButton" class="p-2 rounded-sm ml-1 bg-blue-800">Search</button> 
+    </div>
+  </div>
+    <router-link to="/products">Products</router-link>
+    <router-link to="/cart">ShoppingCart</router-link>
+  </div>
   <SelectionRoute />
-    <div><router-view></router-view></div>
+  <div v-if="loadPage">
+  <ProductList :products="filteredItems" />
+    
+  </div>
+  <div v-else><router-view></router-view></div>
+ 
     
   </div>
 </template>
 
 <script>
 import {products} from './temp-data.js'
-import NavBar from './components/NavBar.vue'
-// import ProductList from './components/ProductList.vue'
+// import NavBar from './components/NavBar.vue'
+import ProductList from './components/ProductList.vue'
 import SelectionRoute from './components/SelectionRoute.vue'
 
 export default {
@@ -19,8 +37,7 @@ export default {
      return{
       searchEntry:'',
       filteredItems:[],
-      
-      loadPage:true,
+      loadPage:false,
       selectedRoute:'',
       
       
@@ -28,22 +45,22 @@ export default {
      }
   },
      components: {
-    // ProductList,
-    NavBar,
+    ProductList,
+    // NavBar,
     SelectionRoute
     
   },
   methods:{
     searchButton(){
        this.filteredItems = products.filter((item) =>
-        item.category.toLowerCase().includes(this.searchEntry.toLowerCase())
+        item.name.toLowerCase().includes(this.searchEntry.toLowerCase()) ||
+        item.category.toLowerCase().includes(this.searchEntry.toLowerCase()) 
+        // item.color.toLowerCase().includes(this.searchEntry.toLowerCase())
       );
-      //  this.filteredName = products.filter((item) =>
-      //   item.name.toLowerCase().includes(this.searchEntry.toLowerCase())
-      // );
-       console.log('searchWord:', this.searchEntry)
+     
+       console.log('searchWord:', this.searchEntry, this.filteredItems)
        this.searchEntry= '';
-      //  this.loadPage= !this.loadPage
+       this.loadPage= !this.loadPage
     },
 
     

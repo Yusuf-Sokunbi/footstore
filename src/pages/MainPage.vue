@@ -1,8 +1,8 @@
 <template>
     <div class="bg-gray-200">
-    <ProductList v-if="filteredItems" :products="filteredItems" />
+    <ProductList v-if="searchEntry" :products="filteredItems" />
     <ProductList v-else :products="newProducts" :name=name  />
-   
+    <p>search:{{ searchEntry }}</p>
     
 
          <!-- <div >
@@ -41,7 +41,7 @@ import ProductList from '@/components/ProductList.vue';
 // import SelectionRoute from './components/SelectionRoute.vue'
 export default{
     name:'MainPage',
-    props:['filteredItems'],
+    props:['searchEntry'],
     data(){
         return{
             newProducts:products.filter(item => item._id <= 6 ),
