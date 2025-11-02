@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- <h1>Product Page</h1> -->
+        <h1 class="text-2xl text-black text-center">List of {{ name }}</h1>
         <listItems :products="products" :name="name" />
     </div>
 </template>

@@ -1,44 +1,15 @@
 <template>
     <div class="bg-gray-200">
-    <ProductList v-if="searchEntry" :products="filteredItems" />
-    <ProductList v-else :products="newProducts" :name=name  />
-    <p>search:{{ searchEntry }}</p>
-    
-
-         <!-- <div >
-        <div class="poster"> 
-            <img :src="Slippers" alt="" width="300px" height="300px" />
-            <br>
-            <router-link to="/palm" class="button-link"><button>{{ view }}&#8594;</button></router-link>
-        </div> 
-        <div class="poster">
-            <img :src="half" alt="" width="300px" height="300px">
-            <br>
-            <router-link to="/halfshoe" class="button-link"><button>{{ view }}&#8594;</button></router-link>
-        </div> 
-        </div>  -->
-        <!-- <div>
-        <div class="poster">
-            <img :src="sandal" alt="" width="300px" height="300px" />
-            <br>
-            <router-link to="/sandal" class="button-link"><button>{{ view }}&#8594;</button></router-link>
-        </div> 
-        <div class="poster">
-            <img :src="shoe" alt="" width="300px" height="300px">
-            <br>
-           <router-link to="/shoe" class="button-link"><button>{{ view }}&#8594;</button></router-link>
-        </div>
-        </div> -->
-     <!-- </div> -->
-   
-        
+    <SelectionRoute />
+    <h1 class="text-2xl text-black text-center">List of {{ name }}</h1> 
+    <ProductList :products="newProducts" :name=name  /> 
     </div>
 </template>
 
 <script>
 import { products } from '@/temp-data';
 import ProductList from '@/components/ProductList.vue';
-// import SelectionRoute from './components/SelectionRoute.vue'
+import SelectionRoute from '@/components/SelectionRoute.vue'
 export default{
     name:'MainPage',
     props:['searchEntry'],
@@ -52,7 +23,7 @@ export default{
     },
     components:{
         ProductList,
-        // SelectionRoute
+        SelectionRoute
 
     },
 

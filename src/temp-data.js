@@ -10,26 +10,34 @@ import ShoeBottle from './FOOTIMAGE/Shoe/IMG_0507.jpg';
 import LouisVitun from './FOOTIMAGE/Half_shoe/IMG_1017.jpg';
 import LouisVitunWhite from './FOOTIMAGE/Half_shoe/IMG_1018.jpg';
 import CrossSlippers from './FOOTIMAGE/Palm/cross_slippers.jpeg';
+// import CrossSlippers from './FOOTIMAGE/Palm/cross_slippers.jpeg';
 
-export const cartItems = [{
-    id: '123',
-    name: 'Basil',
-    price: 20000.00,
-    imageName: basilBottle,
-    quantity:1
-}, {
-    id: '234',
-    name: 'Lemon',
-    price: 20000.00,
-    imageName: lemonBottle,
-    quantity:1
-}, {
-    id: '345',
-    name: 'Garlic',
-    price: 20000.00,
-    imageName: garlicBottle,
-    quantity:1
-}];
+export const cartItems = [
+// {
+//     id: '123',
+//     name: 'Basil',
+//     price: 20000.00,
+//     imageName: basilBottle,
+//     quantity:1,
+//     color: 'Green',
+//     size: '40',
+// }, 
+// {
+//     id: '234',
+//     name: 'Lemon',
+//     price: 20000.00,
+//     imageName: lemonBottle,
+//     quantity:1,
+//        color:"black"
+// }, {
+//     id: '345',
+//     name: 'Garlic',
+//     price: 20000.00,
+//     imageName: garlicBottle,
+//     quantity:1,
+//        color:"black"
+// }
+];
 
 export const products = [{
     id: "123",
@@ -38,8 +46,37 @@ export const products = [{
     price: 20000.00,
     imageName: basilBottle,
     category:'Sandal',
-    size: ['38','39','40','41','42'],
-    color: ['Brown']
+    color: 'Green',
+    size: '40',
+    sizes: [ 
+							{id:1, size:'38',price:2000},
+							{id:2, size:'39',price:22000}, 
+							{id:3, size:'40',price:24000}, 
+							{id:4, size:'41',price:26000}, 
+							{id:5, size:'42',price:28000},
+              {id:6, size:'43',price:30000},
+              {id:7, size:'44',price:32000},
+              {id:8, size:'45',price:34000},
+           ],
+     colors:[{ id:1,
+                      name:'black',
+                       title:'Basil1',
+                       image:basilBottle,
+                        price:28000
+                    },
+                    { id:2,
+                      name:'Brown',
+                      title:'Basil2',
+                      image:garlicBottle,
+                       price:25000
+                    },
+                    { id:3,
+                      name:'White',
+                      title:'Basil3',
+                     image:lemonBottle,
+                      price:22000
+                    },
+                   ],
 }, {
     id: "234",
     _id:2,
@@ -47,8 +84,37 @@ export const products = [{
     price: 20000.00,
     imageName: lemonBottle,
     category:'Sandal',
-    size: ['38','39','40','43','45'],
-    color: ['Brown']
+    size: '42',
+		sizes:[ 
+							{id:1, size:'38',price:2000},
+							{id:2, size:'39',price:22000}, 
+							{id:3, size:'40',price:24000}, 
+							{id:4, size:'41',price:26000}, 
+							{id:5, size:'42',price:28000},
+              {id:6, size:'43',price:30000},
+              {id:7, size:'44',price:32000},
+              {id:8, size:'45',price:34000},
+           ],
+		color:'Brown',
+    colors:[{ id:1,
+                      name:'black',
+                       title:'Lemon1',
+                       image:lemonBottle,
+                      price:22000
+                    },
+                    { id:2,
+                      name:'Brown',
+                      title:'Lemon2',
+                      image:garlicBottle,
+                      price:25000
+                    },
+                    { id:3,
+                      name:'White',
+                      title:'Lemon3',
+                     image:basilBottle,
+                     price:28000
+                    },
+                   ],
 }, {
     id: "345",
     _id:3,
@@ -56,8 +122,37 @@ export const products = [{
     price: 20000.00,
     imageName: garlicBottle,
     category:'Sandal',
-    size: ['38','39','40','42','44'],
-    color: ['Black',]
+    size: '43',
+		sizes: [ 
+							{id:1, size:'38',price:2000},
+							{id:2, size:'39',price:22000}, 
+							{id:3, size:'40',price:24000}, 
+							{id:4, size:'41',price:26000}, 
+							{id:5, size:'42',price:28000},
+              {id:6, size:'43',price:30000},
+              {id:7, size:'44',price:32000},
+              {id:8, size:'45',price:34000},
+           ],
+		color: 'Black',
+    colors:[{ id:1,
+                      name:'black',
+                      title:'Garlic1',
+                      image:garlicBottle,
+                       price:25000
+                    },
+                    { id:2,
+                      name:'Brown',
+                      title:'Garlic1',
+                      image:lemonBottle,
+                       price:22000
+                    },
+                    { id:3,
+                      name:'White',
+                      title:'Garlic1',
+                      image:basilBottle,
+                       price:28000
+                    },
+                   ],
 }, {
     id: "456",
     _id:4,
@@ -65,8 +160,37 @@ export const products = [{
     price: 20000.00,
     imageName: rosemaryBottle,
     category:'Sandal',
-    size: ['40','41','42'],
-    color: ['Black',]
+   size: '40 ',
+		sizes: [ 
+							{id:1, size:'38',price:2000},
+							{id:2, size:'39',price:22000}, 
+							{id:3, size:'40',price:24000}, 
+							{id:4, size:'41',price:26000}, 
+							{id:5, size:'42',price:28000},
+              {id:6, size:'43',price:30000},
+              {id:7, size:'44',price:32000},
+              {id:8, size:'45',price:34000},
+           ],
+		color:'Brown',
+    colors:[{ id:1,
+                      name:'black',
+                      title:'Garlic1',
+                      image:garlicBottle,
+                       price:25000
+                    },
+                    { id:2,
+                      name:'Brown',
+                      title:'Garlic1',
+                      image:lemonBottle,
+                       price:22000
+                    },
+                    { id:3,
+                      name:'White',
+                      title:'Garlic1',
+                      image:basilBottle,
+                       price:28000
+                    },
+                   ],
 }, {
     id: "567",
     _id:5,
@@ -93,16 +217,42 @@ export const products = [{
     imageName: mediumBottle,
     category:'Shoe',
     size: ['38','39','40','41','42'],
-    color: ['other',]
+    color:'White',
+      colors:[{ id:1,
+                      name:'black',
+                      title:'Medium',
+                      image:require("./FOOTIMAGE/Shoe/blackhanqu.jpg"),
+                       price:45000
+                    },
+                    { id:2,
+                      name:'Brown',
+                      title:'Medium',
+                      image:require("./FOOTIMAGE/Shoe/brownsuwadi.jpg"),
+                      price:32000
+                    },
+                    { id:3,
+                      name:'White',
+                      title:'Medium',
+                      image:mediumBottle,
+                      price:40000
+                    },
+                   ],
 }, {
     id: "890",
     _id:8,
     name: 'Bold',
-    price: 35000.50,
+    price: 35000.00,
     imageName: boldBottle,
     category:'Shoe',
-    size: ['38','40','41','42'],
-    color: ['Black',]
+    size: '41',
+		sizes: [ 
+							{id:1, size:'38',price:28000},
+							{id:2, size:'39',price:30000}, 
+							{id:3, size:'40',price:33000}, 
+							{id:4, size:'41',price:35000}, 
+							{id:5, size:'42',price:45000}
+           ],
+    color: 'Black',
 },
  {
     id: "100",
@@ -112,7 +262,7 @@ export const products = [{
     imageName: LouisVitun,
     category:'Halfshoe',
     size: ['38','39','40','41','42'],
-    color: ['Brown']
+    // color: ['Brown']
 }, {
     id: "101",
     _id:10,
@@ -121,7 +271,7 @@ export const products = [{
     imageName: ShoeBottle,
     category:'Shoe',
     size: ['38','39','40','41','42'],
-    color: ['other',]
+    // color: ['other',]
 }, {
     id: "102",
     _id:11,
@@ -130,7 +280,7 @@ export const products = [{
     imageName: LouisVitunWhite,
     category:'Halfshoe',
     size: ['40','41','42','43','44'],
-    color: ['White']
+    // color: ['White']
 }, {
     id: "103",
     _id:12,
@@ -139,7 +289,7 @@ export const products = [{
     imageName: boldBottle,
     category:'Shoe',
     size: ['38','39','40','41','42'],
-    color: ['Black',]
+    // color: ['Black',]
 },
 {
     id: "104",
@@ -149,7 +299,7 @@ export const products = [{
     imageName: CrossSlippers,
     category:'Palm',
     size: ['38','39','40','41','42'],
-    color: ['Black','Brown']
+    // color: ['Black','Brown']
 
 },
 ];
@@ -158,8 +308,8 @@ export const products = [{
  export const sandals = products.filter(product => product.category === 'Sandal')
  export const halfshoes = products.filter(product => product.category === 'Halfshoe')
  export const palms = products.filter(product => product.category === 'Palm')
- export const blacks = products.filter(product => product.color.includes('Black'))
- export const browns = products.filter(product => product.color.includes('Brown'))
- export const whites = products.filter(product => product.color.includes('White'))
- export const others = products.filter(product => product.color.includes('other'))
+//  export const blacks = products.filter(product => product.color.includes('Black'))
+//  export const browns = products.filter(product => product.color.includes('Brown'))
+//  export const whites = products.filter(product => product.color.includes('White'))
+//  export const others = products.filter(product => product.color.includes('other'))
 

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div>
          <input type="text" placeholder="Enter your product name"
       @input="debouncedSearch" v-model="searchEntry" class="py-2 px-4 text-black">
@@ -34,4 +34,32 @@ export default {
  
 }
 }
+</script> -->
+
+<template>
+  <div>
+    <input
+      v-model="searchQuery"
+      @keyup.enter="submitSearch"
+      placeholder="Search products..."
+      class="py-2 px-4 text-black"
+    />
+    <button @click="submitSearch" class="p-2 rounded-sm ml-1 bg-[#272626]">Search</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      searchQuery: ''
+    };
+  },
+  methods: {
+    submitSearch() {
+      this.$emit('search', this.searchQuery);
+      this.searchQuery = ''
+    }
+  }
+};
 </script>

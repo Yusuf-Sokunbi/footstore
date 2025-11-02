@@ -1,16 +1,17 @@
 <template>
-    <div class="flex md:gap-2 md:ml-[20px]">
+    <div class="flex md:gap-2 md:ml-[20px] py-8">
+      <hr>
        <div>
         <select class="md:w-[100px] p-2  border-[#4CAF50] text-[#333] md:text-md"
-        id="" v-model="selectedCategory" @change="navigateToSelectdRoute">
-               <option value="" disabled>Category</option>
-               <option value="shoe">Shoe</option>
+        id="" v-model="selectedCategory" @change="navigateToSelectdRoute"> 
+                <option value="" disabled>Category</option>
+               <option value="/shoe">Shoe</option>
                <option value="/sandal">Sandal</option>
                <option value="/palm">Palm</option>
-               <option value="/halfshoe">Halfshoe</option> 
-       </select>
+               <option value="/halfshoe">Halfshoe</option>  
+       </select> 
      </div>
-      <div>
+      <!-- <div>
         <select class="md:w-[100px] p-2  border-[#4CAF50]  text-[#333] md:text-md"
         id="" v-model="selectedColor" @change="navigateToSelectdRoute">
                <option value="" disabled>Color</option>
@@ -41,7 +42,8 @@
                <option value="">44</option> 
                <option value="">45</option> 
        </select>
-     </div>
+     </div> -->
+     <hr>
     </div>
 </template>
 
@@ -51,13 +53,18 @@ export default{
      return{
       searchEntry:'',
       filteredItems:[],
-      
       loadPage:true,
       selectedCategory:'',
       selectedColor:'',
       selectedPrize:'',
       selectedSize:'',
-      
+      //    category: [
+      //   { name: "Shoe", path: "/shoe" },
+      //   { name: "HalfShoe", path: "/halfshoe" },
+      //   { name: "Sandal", path: "/sandal" },
+      //   { name: "Slippers", path: "/palm" }
+      // ]
+
       
       
      }
@@ -67,15 +74,15 @@ export default{
             if(this.selectedCategory){
                 this.$router.push(this.selectedCategory)
             }
-            if(this.selectedColor){
-                this.$router.push(this.selectedColor)
-            }
-            if(this.selectedPrize){
-                this.$router.push(this.selectedPrize)
-            }
-            if(this.selectedSize){
-                this.$router.push(this.selectedSize)
-            }
+            // if(this.selectedColor){
+            //     this.$router.push(this.selectedColor)
+            // }
+            // if(this.selectedPrize){
+            //     this.$router.push(this.selectedPrize)
+            // }
+            // if(this.selectedSize){
+            //     this.$router.push(this.selectedSize)
+            // }
         }
   }
   }

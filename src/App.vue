@@ -1,86 +1,95 @@
 <template>
-  <div class="cove">
-  <!-- <NavBar :name="searchEntry" :values="filteredItems"/> -->
-     <div class="md:flex justify-between mx-4 bg-black p-3 text-white items-center"> 
-    <router-link to="/" class="flex items-center gap-2"><img :src="FootIcon" alt="" class="w-[20%] rounded-full"><span class="text-lg font-bold">FootShop</span></router-link>
-    <div class="py-4">
-    <!-- <SearchButton :value=""/> -->
-        <div>
-         <input type="text" placeholder="Enter your product name"
-      @input="debouncedSearch" v-model="searchEntry" class="py-2 px-4 text-black">
-    <button @click="searchButton" class="p-2 rounded-sm ml-1 bg-blue-800">Search</button> 
-    </div>
-  </div>
-    <router-link to="/products">Products</router-link>
-    <router-link to="/cart">ShoppingCart</router-link>
-  </div>
-  <SelectionRoute />
-  <div v-if="loadPage">
-  <ProductList :products="filteredItems" />
-    
-  </div>
-  <div v-else><router-view></router-view></div>
- 
-    
-  </div>
+  <div class="relative">
+      <HeaderPage @search="filterProducts" />
+      
+      <SelectionRoute />
+      <div v-if="loadPage" >
+        <transition name="fade">
+         <div v-if="filteredItems.length" class="results">
+           <ProductList :products="filteredItems"  />
+         </div>
+        </transition>
+
+      </div>
+      <div v-else>
+        <transition name="slide" mode="out-in">
+          <router-view />
+        </transition>
+      </div>
+      <FooterPage />
+   </div>
 </template>
+
+   <!-- <router-link
+      v-for="link in category"
+      :key="link.path"
+      :to="link.path"
+      class="px-4 py-2"
+      :class="$route.path === link.path ? 'text-blue-600 font-semibold' : 'text-gray-600'"
+    >
+      {{ link.name }}
+    </router-link> -->
 
 <script>
 import {products} from './temp-data.js'
-// import NavBar from './components/NavBar.vue'
+import HeaderPage from './components/HeaderPage.vue'
+
 import ProductList from './components/ProductList.vue'
-import SelectionRoute from './components/SelectionRoute.vue'
+// import SelectionRoute from './components/SelectionRoute.vue'
+import FooterPage from './pages/FooterPage.vue'
 
 export default {
   name: 'App',
   data(){
      return{
-      searchEntry:'',
       filteredItems:[],
       loadPage:false,
-      selectedRoute:'',
       
+      // selectedRoute:'',
+      // FootIcon,
       
       
      }
   },
      components: {
     ProductList,
-    // NavBar,
-    SelectionRoute
+    HeaderPage,
+    // SelectionRoute,
+    FooterPage
     
   },
-  methods:{
-    searchButton(){
-       this.filteredItems = products.filter((item) =>
-        item.name.toLowerCase().includes(this.searchEntry.toLowerCase()) ||
-        item.category.toLowerCase().includes(this.searchEntry.toLowerCase()) 
-        // item.color.toLowerCase().includes(this.searchEntry.toLowerCase())
+  methods: {
+    filterProducts(query) {
+    this.filteredItems = products.filter((item) =>
+        item.name.toLowerCase().includes(query.toLowerCase()) ||
+        item.category.toLowerCase().includes(query.toLowerCase()) 
+        // item.color.toLowerCase().includes(query.toLowerCase())
       );
-     
-       console.log('searchWord:', this.searchEntry, this.filteredItems)
-       this.searchEntry= '';
-       this.loadPage= !this.loadPage
-    },
-
-    
-  },
+      this.loadPage= !this.loadPage
+      console.log(this.filteredItems)
+    }
+  }
  
 }
 </script>
+
 <style>
-.route-link{
-  display: flex;
-  justify-content: space-around;
-  }
-  /* select {
-  width: 200px;
-  padding: 10px;
-  border: 2px solid #4CAF50;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  color: #333;
-  font-size: 16px;
-} */
-  </style>
+fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.5s ease;
+}
+.slide-enter {
+  transform: translateX(100%);
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+</style>
 

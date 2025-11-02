@@ -1,12 +1,16 @@
 <template>
-    <div class="mx-auto text-start w-[60%]">
+    <div class="mx-auto text-start w-[70%] ">
+       <div v-if="cartItems.length > 0" class="flex justify-around">
+        <div>
         <h1 class="text-3xl font-bold">Shopping Cart</h1>
-       <div v-if="cartItems.length > 0">
         <ShoppingCartList :products="cartItems" />
-        <button class="text-white bg-black w-[100%] py-3 mt-2 font-bold">Proceed to Checkout</button>
+        
        </div>
-       <div v-if="cartItems.length === 0">
-        You current have no items in your cart
+      
+       </div>
+       
+       <div v-if="cartItems.length === 0" class="font-bold text-center my-24">
+       <h3> You current have no items in your cart</h3>
        </div>
     </div>
 </template>
