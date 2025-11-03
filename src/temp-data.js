@@ -28,14 +28,16 @@ export const cartItems = [
 //     price: 20000.00,
 //     imageName: lemonBottle,
 //     quantity:1,
-//        color:"black"
-// }, {
+//     color:"black",
+//     size: '40',
+// }, 
+// {
 //     id: '345',
 //     name: 'Garlic',
 //     price: 20000.00,
 //     imageName: garlicBottle,
 //     quantity:1,
-//        color:"black"
+//     color:"black"
 // }
 ];
 
@@ -86,7 +88,7 @@ export const products = [{
     category:'Sandal',
     size: '42',
 		sizes:[ 
-							{id:1, size:'38',price:2000},
+							{id:1, size:'38',price:20000},
 							{id:2, size:'39',price:22000}, 
 							{id:3, size:'40',price:24000}, 
 							{id:4, size:'41',price:26000}, 
@@ -124,7 +126,7 @@ export const products = [{
     category:'Sandal',
     size: '43',
 		sizes: [ 
-							{id:1, size:'38',price:2000},
+							{id:1, size:'38',price:20000},
 							{id:2, size:'39',price:22000}, 
 							{id:3, size:'40',price:24000}, 
 							{id:4, size:'41',price:26000}, 
@@ -162,7 +164,7 @@ export const products = [{
     category:'Sandal',
    size: '40 ',
 		sizes: [ 
-							{id:1, size:'38',price:2000},
+							{id:1, size:'38',price:20000},
 							{id:2, size:'39',price:22000}, 
 							{id:3, size:'40',price:24000}, 
 							{id:4, size:'41',price:26000}, 
@@ -308,8 +310,8 @@ export const products = [{
  export const sandals = products.filter(product => product.category === 'Sandal')
  export const halfshoes = products.filter(product => product.category === 'Halfshoe')
  export const palms = products.filter(product => product.category === 'Palm')
-//  export const blacks = products.filter(product => product.color.includes('Black'))
-//  export const browns = products.filter(product => product.color.includes('Brown'))
-//  export const whites = products.filter(product => product.color.includes('White'))
-//  export const others = products.filter(product => product.color.includes('other'))
+ export const blacks = products.filter(product => product.color ==='Black')
+ export const browns = products.filter(product => product.color ==='Brown')
+ export const whites = products.filter(product => product.color === 'White')
+ export const others = products.filter(product => product.color === 'other')
 

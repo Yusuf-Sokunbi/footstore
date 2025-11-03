@@ -11,7 +11,7 @@
                <option value="/halfshoe">Halfshoe</option>  
        </select> 
      </div>
-      <!-- <div>
+     <div>
         <select class="md:w-[100px] p-2  border-[#4CAF50]  text-[#333] md:text-md"
         id="" v-model="selectedColor" @change="navigateToSelectdRoute">
                <option value="" disabled>Color</option>
@@ -21,7 +21,7 @@
                <option value="/other">Other</option> 
        </select>
      </div>
-      <div>
+     <!-- <div>
         <select class="md:w-[100px] p-2  border-[#4CAF50]  text-[#333] md:text-md"
         id="" v-model="selectedPrize" @change="navigateToSelectdRoute">
                <option value="" disabled>Price</option>
@@ -49,6 +49,7 @@
 
 <script>
 export default{
+  name:"SelectionRoute",
  data(){
      return{
       searchEntry:'',

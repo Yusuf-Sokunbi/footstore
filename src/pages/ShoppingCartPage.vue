@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto text-start w-[70%] ">
+    <div class="mx-auto md:text-start md:w-[70%] w-[50] ">
        <div v-if="cartItems.length > 0" class="flex justify-around">
         <div>
         <h1 class="text-3xl font-bold">Shopping Cart</h1>

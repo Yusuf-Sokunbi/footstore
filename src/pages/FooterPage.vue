@@ -4,7 +4,7 @@
       
       <!-- Navigation -->
       <div>
-        <h3 class="text-lg font-semibold  absolute top-[800px]">Shop</h3>
+        <h3 class="text-lg font-semibold  absolute top-[800px]"></h3>
         <ul class="space-y-2">
           <li><a href="/" class="hover:underline">Home</a></li>
           <li><a href="/products" class="hover:underline">All Products</a></li>
