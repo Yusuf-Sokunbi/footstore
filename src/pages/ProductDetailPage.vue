@@ -59,9 +59,10 @@ export default{
     },
     methods:{
       addToCart(){
-        const existingItem = cartItems.find(cart => cart.id === this.product.id)
+        const existingItem = cartItems.find(cart => cart.size === this.product.size && cart.imageName === this.product.imageName)
         if(existingItem){
-          existingItem.quantity++
+          // existingItem.quantity++
+          alert('is on the cart')
         }else {
           cartItems.push({ ...this.product, quantity:1,  })
           // this.cart +=1
@@ -79,7 +80,7 @@ export default{
     },
     updateImage(image, title, price, name, ){
       this.product.imageName = image
-      this.product.name =  title
+      // this.product.name =  title
       this.product.price = price
       this.product.color = name
       // this.size = size

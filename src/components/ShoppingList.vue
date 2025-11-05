@@ -2,9 +2,9 @@
     <div class="relative">
         <hr class="border-t-[0.1px] border-gray-400 my-2 w-[100%] mx-"/>
     <div class="flex  gap-2">
-         <div class="flex ml-2   w-[55%] md:w-[65%] border-black border-[2px] border-solid rounded-md">
+         <div class="flex ml-2  w-[55%] md:w-[65%] border-black border-[2px] border-solid rounded-md">
         <div>
-           <div class="flex md:justify-between items-center  md:py-4 "
+           <div class="flex md:justify-between md:items-center  md:py-4 "
         v-for="product in products" 
         :key="product.id">
           <div class="md:flex md:items-center md:gap-8">

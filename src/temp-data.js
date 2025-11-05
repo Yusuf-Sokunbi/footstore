@@ -45,13 +45,13 @@ export const products = [{
     id: "123",
     _id:1,
     name: 'Basil',
-    price: 20000.00,
-    imageName: basilBottle,
+    price: 28000.00,
+   imageName:require("./FOOTIMAGE/Shoe/shoelaceblack.jpg"),
     category:'Sandal',
-    color: 'Green',
+    color: 'Brown',
     size: '40',
     sizes: [ 
-							{id:1, size:'38',price:2000},
+							{id:1, size:'38',price:20000},
 							{id:2, size:'39',price:22000}, 
 							{id:3, size:'40',price:24000}, 
 							{id:4, size:'41',price:26000}, 
@@ -63,19 +63,19 @@ export const products = [{
      colors:[{ id:1,
                       name:'black',
                        title:'Basil1',
-                       image:basilBottle,
+                       image:require("./FOOTIMAGE/Shoe/shoelaceblack.jpg"),
                         price:28000
                     },
                     { id:2,
                       name:'Brown',
                       title:'Basil2',
-                      image:garlicBottle,
+                      image:require("./FOOTIMAGE/Shoe/brownlace.jpg"),
                        price:25000
                     },
                     { id:3,
-                      name:'White',
+                      name:'Blue',
                       title:'Basil3',
-                     image:lemonBottle,
+                     image:require("./FOOTIMAGE/Shoe/shoelaceblue.jpg"),
                       price:22000
                     },
                    ],
@@ -99,13 +99,13 @@ export const products = [{
            ],
 		color:'Brown',
     colors:[{ id:1,
-                      name:'black',
+                      name:'Brown',
                        title:'Lemon1',
                        image:lemonBottle,
                       price:22000
                     },
                     { id:2,
-                      name:'Brown',
+                      name:'Black',
                       title:'Lemon2',
                       image:garlicBottle,
                       price:25000
@@ -200,8 +200,8 @@ export const products = [{
     price: 20000.00,
     imageName: chiliBottle,
     category:'Sandal',
-    size: ['38','39','40','42'],
-    color: ['black',]
+    size: '43',
+    color: 'black',
 }, {
     id: "678",
     _id:6,
@@ -209,8 +209,8 @@ export const products = [{
     price: 35000.00,
     imageName: delicateBottle,
     category:'Shoe',
-    size: ['38','39','40','41','42'],
-    color: ['black',]
+    size: '38',
+    color: 'black',
 }, {
     id: "789",
     _id:7,
@@ -218,7 +218,7 @@ export const products = [{
     price: 40000.00,
     imageName: mediumBottle,
     category:'Shoe',
-    size: ['38','39','40','41','42'],
+    size: '38',
     color:'White',
       colors:[{ id:1,
                       name:'black',
@@ -263,8 +263,8 @@ export const products = [{
     price: 30000.00,
     imageName: LouisVitun,
     category:'Halfshoe',
-    size: ['38','39','40','41','42'],
-    // color: ['Brown']
+    size: '41',
+    color: 'Brown'
 }, {
     id: "101",
     _id:10,
@@ -272,8 +272,8 @@ export const products = [{
     price: 35000.00,
     imageName: ShoeBottle,
     category:'Shoe',
-    size: ['38','39','40','41','42'],
-    // color: ['other',]
+    size: '40',
+    color: 'brown',
 }, {
     id: "102",
     _id:11,
@@ -281,8 +281,8 @@ export const products = [{
     price: 30000.00,
     imageName: LouisVitunWhite,
     category:'Halfshoe',
-    size: ['40','41','42','43','44'],
-    // color: ['White']
+    size: '43',
+    color: 'White'
 }, {
     id: "103",
     _id:12,
@@ -290,8 +290,8 @@ export const products = [{
     price: 35000.00,
     imageName: boldBottle,
     category:'Shoe',
-    size: ['38','39','40','41','42'],
-    // color: ['Black',]
+    size: '42',
+    color: 'Black',
 },
 {
     id: "104",
@@ -300,8 +300,8 @@ export const products = [{
     price: 18000.00,
     imageName: CrossSlippers,
     category:'Palm',
-    size: ['38','39','40','41','42'],
-    // color: ['Black','Brown']
+    size: '40',
+    color: 'Black',
 
 },
 ];
