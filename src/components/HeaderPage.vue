@@ -4,7 +4,7 @@
 <template>
   <nav class="md:sticky top-0 md:flex justify-between mx-4 bg-[#252424] p-3 text-white items-center">
     <router-link to="/" class="flex items-center gap-1"
-    :class="$route.path === '/' ? 'text-blue-600 font-semibold' : 'text-[#9f9d9d]'"><img src="@/FOOTIMAGE/ycicon.jpg" alt="" class="w-[50px] h-[50px] border-gray-400 border-solid border-2 rounded-full"><span class="text-base font-bold hover:bg-white  hover:text-black p-2">YFootConcept</span></router-link>
+    :class="$route.path === '/' ? 'text-blue-600 font-semibold' : 'text-[#9f9d9d]'"><img src="@/FOOTIMAGE/ycicon.jpg" alt="" class="w-[50px] h-[50px] border-gray-400 border-solid border-2 rounded-full"><span class="text-base font-bold hover:bg-white  hover:text-black p-2">YFootwear</span></router-link>
     <SearchButton @search="handleSearch" />
     <router-link to="/products" 
      class="hover:bg-white 
